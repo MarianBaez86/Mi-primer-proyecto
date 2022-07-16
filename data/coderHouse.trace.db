@@ -1,0 +1,20 @@
+2022-07-09 17:54:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE CLIENTE [*]IF EXIST"
+Syntax error in SQL statement "DROP TABLE CLIENTE [*]IF EXIST"; SQL statement:
+DROP TABLE CLIENTE IF EXIST [42000-214]
+2022-07-09 18:00:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE CLIENTE [*]IF EXIST"
+Syntax error in SQL statement "DROP TABLE CLIENTE [*]IF EXIST"; SQL statement:
+DROP TABLE CLIENTE IF EXIST [42000-214]
+2022-07-09 18:01:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE CLIENTE [*]IF EXIST"
+Syntax error in SQL statement "DROP TABLE CLIENTE [*]IF EXIST"; SQL statement:
+DROP TABLE CLIENTE IF EXIST [42000-214]
+2022-07-09 19:39:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP TABLE CLIENTE [*]CREATE TABLE IF NOT EXISTS CLIENTE ( nombre VARCHAR(50), apellido VARCHAR(50), dni INT, FECHA_DE_NACIMIENTO DATE )"
+Syntax error in SQL statement "DROP TABLE CLIENTE [*]CREATE TABLE IF NOT EXISTS CLIENTE ( nombre VARCHAR(50), apellido VARCHAR(50), dni INT, FECHA_DE_NACIMIENTO DATE )"; SQL statement:
+DROP TABLE CLIENTE CREATE TABLE IF NOT EXISTS CLIENTE ( nombre VARCHAR(50), apellido VARCHAR(50), dni INT, FECHA_DE_NACIMIENTO DATE ) [42000-214]
+2022-07-10 09:49:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE IF NOT EXISTS CLIENTE ( nombre VARCHAR(50), apellido VARCHAR(50), dni INT, FECHA_DE_NACIMIENTO DATE, primary key (dni), [*])"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS CLIENTE ( nombre VARCHAR(50), apellido VARCHAR(50), dni INT, FECHA_DE_NACIMIENTO DATE, primary key (dni), [*])"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS CLIENTE ( nombre VARCHAR(50), apellido VARCHAR(50), dni INT, FECHA_DE_NACIMIENTO DATE, primary key (dni), ) [42001-214]
