@@ -15,6 +15,12 @@ INSERT INTO CLIENTE
 values
 ( 'Thelma' , 'Martinez', 41345761, '1998-08-10');
 
+INSERT INTO PRODUCTO
+(id, descripcion, precio, activo, fecha_creacion, fecha_actualizacion,stock)
+values
+( 1, 'Zapatilla Nike', 25000, true, '2021-06-16', '2022-07-16', 451);
 
-
-
+INSERT INTO PRODUCTO
+(id, descripcion, precio, activo, fecha_creacion, fecha_actualizacion,stock)
+values
+( 2, 'Claza Rebook', 15000, true, '2021-06-16', '2022-07-16', 250);

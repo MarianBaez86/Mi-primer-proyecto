@@ -1,8 +1,8 @@
 package com.coderclase11.clientes.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
 import static javax.persistence.GenerationType.IDENTITY;
