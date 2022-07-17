@@ -10,6 +10,11 @@ public class ProductoDtoAEntityConverter {
         Producto producto = new Producto();
         producto.setId(productoDto.getId());
         producto.setDescripcion(productoDto.getDescripcion());
+        producto.setPrecio(productoDto.getPrecio());
+        producto.setActivo(productoDto.isActivo());
+        producto.setFechaCreacion(productoDto.getFechaCreacion());
+        producto.setFechaActualizacion(productoDto.getFechaActualizacion());
+        producto.setStock(productoDto.getStock());
         return producto;
     }
 }

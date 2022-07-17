@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS CLIENTE
 (
     nombre   VARCHAR(50),
     apellido VARCHAR(50),
-    dni      INT,
+    dni      INT NOT NULL,
     FECHA_DE_NACIMIENTO  DATE,
     primary key (dni)
 
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS CLIENTE
 
 CREATE TABLE IF NOT EXISTS PRODUCTO
 (
-    id   INT,
+    id   INT NOT NULL,
     descripcion VARCHAR(50),
     precio      DECIMAL (20),
     activo BOOLEAN,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS PRODUCTO
 
 CREATE TABLE IF NOT EXISTS COMPROBANTE
 (
-    id   INT,
+    id   INT NOT NULL,
     dni_cliente INT,
     fecha_creacion DATE,
     cuit_empresa      VARCHAR(50),
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS COMPROBANTE
 
 CREATE TABLE IF NOT EXISTS LINEA_COMPROBANTE
 (
-    id   INT,
+    id   INT NOT NULL,
     id_producto INT,
     id_comprobante INT,
     detalle VARCHAR(50),
