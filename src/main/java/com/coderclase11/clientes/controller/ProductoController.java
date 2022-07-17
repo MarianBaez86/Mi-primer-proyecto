@@ -26,10 +26,10 @@ public class ProductoController {
         return productoService.buscarPorId(id);
    }
 
-  // @PostMapping
-  // public ProductoDto agregarProducto(@RequestBody ProductoDto productoDto){
-    //     return productoService.agregarProducto(productoDto);
-  //}
+    /*@PostMapping
+    public ProductoDto agregarProducto(@RequestBody ProductoDto productoDto){
+        return productoService.agregarProducto(productoDto);
+    }*/
 
     @PutMapping
     public ProductoDto actualizarProducto(@RequestBody ProductoDto productoDto) {

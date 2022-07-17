@@ -15,6 +15,11 @@ INSERT INTO CLIENTE
 values
 ( 'Thelma' , 'Martinez', 41345761, '1998-08-10');
 
+INSERT INTO CLIENTE
+(nombre, apellido, dni, FECHA_DE_NACIMIENTO)
+values
+( 'Claudia' , 'Almeida', 28367890, '1983-09-21');
+
 INSERT INTO PRODUCTO
 (id, descripcion, precio, activo, fecha_creacion, fecha_actualizacion,stock)
 values

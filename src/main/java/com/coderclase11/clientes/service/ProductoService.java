@@ -45,10 +45,11 @@ public class ProductoService {
         return productoDto;
     }
 
-  //  public void ProductoDto agregarProducto(ProductoDto productoDto){
-   //     Producto producto = this.converterDto.convert(productoDto);
-    //    this.repository.save(producto);
-   // }
+   /* public ProductoDto agregarProducto(ProductoDto productoDto){
+        Producto producto = this.converterDto.convert(productoDto);
+        this.repository.save(producto);
+        return productoDto;
+    }*/
 
     public ProductoDto actualizarProducto(ProductoDto productoDto){
         Producto producto = this.converterDto.convert(productoDto);

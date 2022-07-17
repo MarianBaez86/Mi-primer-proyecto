@@ -1,11 +1,10 @@
 package com.coderclase11.clientes.controller;
 
+import com.coderclase11.clientes.dto.ClienteDto;
+import com.coderclase11.clientes.dto.ProductoDto;
 import com.coderclase11.clientes.model.Cliente;
 import com.coderclase11.clientes.service.ClienteService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,13 +19,19 @@ public class ClienteController {
     }
 
     @GetMapping
-    public List<Cliente> obtenerTodosLosClientes(){
+    public List<ClienteDto> obtenerTodosLosClientes(){
         return clienteService.buscarTodosLosClientes();
     }
 
     @GetMapping("/{dni}")
-    public Cliente buscarPorDni(@PathVariable Long dni){
+    public ClienteDto buscarPorDni(@PathVariable Long dni){
         return clienteService.buscarPordni(dni);
     }
+
+    @PutMapping
+    public ClienteDto actualizarCliente(@RequestBody ClienteDto clienteDto) {
+        return clienteService.actualizarCliente(clienteDto);
+    }
+
 
    }
