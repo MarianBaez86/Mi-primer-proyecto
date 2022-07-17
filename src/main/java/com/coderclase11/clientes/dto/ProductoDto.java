@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class ProductoDto {
 
-    private long id;
+    private Long id;
 
     private String descripcion;
 
@@ -18,11 +18,11 @@ public class ProductoDto {
 
     private int stock;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

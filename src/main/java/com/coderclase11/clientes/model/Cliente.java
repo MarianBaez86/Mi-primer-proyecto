@@ -11,7 +11,7 @@ public class Cliente {
 
     @Column(name = "DNI")
     @Id
-    private long dni;
+    private Long dni;
 
     @Column(name = "NOMBRE")
     private String nombre;
@@ -31,7 +31,7 @@ public class Cliente {
     }
 
     // Contructor
-    public Cliente(String nombre, String apellido, LocalDate fechaNacimiento, long dni) {
+    public Cliente(String nombre, String apellido, LocalDate fechaNacimiento, Long dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
@@ -63,11 +63,11 @@ public class Cliente {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public long getDni() {
+    public Long getDni() {
         return dni;
     }
 
-    public void setDni(long dni) {
+    public void setDni(Long dni) {
         this.dni = dni;
     }
 

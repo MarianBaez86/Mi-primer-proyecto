@@ -13,7 +13,7 @@ public class Producto {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    private long id;
+    private Long id;
 
     private String descripcion;
 
@@ -30,11 +30,11 @@ public class Producto {
     public Producto() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

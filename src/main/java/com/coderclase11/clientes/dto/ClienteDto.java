@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class ClienteDto {
 
-    private long dni;
+    private Long dni;
 
     private String nombre;
 
@@ -12,13 +12,13 @@ public class ClienteDto {
 
     private LocalDate fechaDeNacimiento;
 
-    //private int edad;
+    private int edad;
 
-    public long getDni() {
+    public Long getDni() {
         return dni;
     }
 
-    public void setDni(long dni) {
+    public void setDni(Long dni) {
         this.dni = dni;
     }
 
@@ -46,13 +46,13 @@ public class ClienteDto {
         this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
-    /*public int getEdad() {
+    public int getEdad() {
         return edad;
     }
 
     public void setEdad(int edad) {
         this.edad = edad;
-    }*/
+    }
 }
 
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ProductoDtoAEntityConverter {
     public Producto convert(ProductoDto productoDto) {
         Producto producto = new Producto();
-        producto.setId(productoDto.getId());
+        producto.setId(productoDto.getId() != null ? productoDto.getId() : null);
         producto.setDescripcion(productoDto.getDescripcion());
         producto.setPrecio(productoDto.getPrecio());
         producto.setActivo(productoDto.isActivo());

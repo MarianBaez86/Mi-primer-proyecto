@@ -33,7 +33,8 @@ public class ClienteService {
         for (Cliente cliente : clientes) {
             ClienteDto clienteDto = this.converter.convert(cliente);
             clientesDto.add(clienteDto);
-
+            int edad = getEdadCliente(cliente);
+            clienteDto.setEdad(edad);
         }
         return clientesDto;
     }
@@ -55,6 +56,8 @@ public class ClienteService {
             return new ClienteDto();
         }
         ClienteDto clienteDto = this.converter.convert(cliente);
+        int edad = getEdadCliente(cliente);
+        clienteDto.setEdad(edad);
         return clienteDto;
     }
 
@@ -69,17 +72,43 @@ public class ClienteService {
         return cliente;
     }*/
 
-
-    public ClienteDto actualizarCliente(ClienteDto clienteDto){
+    //Crear nuevos los Clientes (POST)
+    public ClienteDto agregarCliente(ClienteDto clienteDto){
         Cliente cliente = this.converterDto.convert(clienteDto);
         this.repository.save(cliente);
         return clienteDto;
     }
 
 
-    private int getEdadCliente(LocalDate fechaNacimiento) {
+    //Actualiza los Clientes (PUT)
+    public ClienteDto actualizarCliente(ClienteDto clienteDto){
+        Cliente cliente = this.converterDto.convert(clienteDto);
+        this.repository.save(cliente);
+        return clienteDto;
+    }
+
+    //Agregar dato la edad a cada cliente
+    public List<Cliente> buscarTodosLosClientesOtro() {
+        List<Cliente> clientes = repository.findAll();
+        for (Cliente c:clientes){
+            c.setEdad(this.getEdadCliente(c));
+        }
+        return clientes;
+    }
+
+    // SIN USAR ClienteDto
+    /*private int getEdadCliente(LocalDate fechaNacimiento) {
+        LocalDate fechaActual = LocalDate.now();
+        Period period = Period.between(fechaNacimiento, fechaActual);
+        return period.getYears();
+    }*/
+
+    private int getEdadCliente(Cliente cliente) {
+        LocalDate fechaNacimiento = cliente.getFechaNacimiento();
         LocalDate fechaActual = LocalDate.now();
         Period period = Period.between(fechaNacimiento, fechaActual);
         return period.getYears();
     }
+
+
 }

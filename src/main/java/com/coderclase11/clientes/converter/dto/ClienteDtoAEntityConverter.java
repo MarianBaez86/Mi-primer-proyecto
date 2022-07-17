@@ -8,12 +8,11 @@ import org.springframework.stereotype.Component;
 public class ClienteDtoAEntityConverter {
     public Cliente convert(ClienteDto clienteDto) {
         Cliente cliente = new Cliente();
-        cliente.setDni(clienteDto.getDni());
+        cliente.setDni(clienteDto.getDni() != null ? clienteDto.getDni() : null);
         cliente.setNombre(clienteDto.getNombre());
-        cliente.setApellido(cliente.getApellido());
+        cliente.setApellido(clienteDto.getApellido());
         cliente.setFechaNacimiento(clienteDto.getFechaDeNacimiento());
-        //cliente.setEdad(clienteDto.getEdad());
-               return cliente;
+                    return cliente;
         }
     }
 
