@@ -28,4 +28,4 @@ values
 INSERT INTO PRODUCTO
 (descripcion, precio, activo, fecha_creacion, fecha_actualizacion,stock)
 values
-('Claza Rebook', 15000, true, '2021-06-16', '2022-07-16', 250);
+('Claza Rebook', 15000, true, '2021-01-16', '2022-07-30', 250);

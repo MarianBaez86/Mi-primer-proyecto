@@ -67,7 +67,8 @@ public class ClienteService {
         if (cliente == null){
             return new Cliente();
         }
-        int edad = getEdadCliente(cliente.getFechaNacimiento());
+        i
+        nt edad = getEdadCliente(cliente.getFechaNacimiento());
         cliente.setEdad(edad);
         return cliente;
     }*/

@@ -18,6 +18,7 @@ public class ProductoDto {
 
     private int stock;
 
+
     public Long getId() {
         return id;
     }
