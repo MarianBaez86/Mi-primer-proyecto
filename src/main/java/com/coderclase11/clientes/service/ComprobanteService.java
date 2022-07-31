@@ -149,7 +149,7 @@ public class ComprobanteService {
         return total;
     }
 
-
+    //Stock
     private void actualizarStock(Set<ItemsComprobante> itemsComprobantes) {
         for (ItemsComprobante itemsComprobante : itemsComprobantes) {
             var cantidadVendida = itemsComprobante.getCantidad();
